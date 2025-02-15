@@ -3,102 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincent Uba - Portfolio</title>
+    <meta name="description" content="Vincent Uba's Portfolio - Masters Thesis Documentation and Projects">
+    <title>Vincent Uba | Thesis Portfolio</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            line-height: 1.6; 
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
-            background: #f0f2f5;
+            padding: 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
-        h1, h2, h3 {
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
+
+        /* Navigation */
+        .nav {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        h1 { 
-            font-size: 2.5em; 
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.3em;
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
         }
-        .section {
-            margin: 2em 0;
-            padding: 1.5em;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-        .section:hover {
-            transform: translateY(-3px);
-        }
-        a {
-            color: #3498db;
+
+        .nav-link {
+            color: white;
             text-decoration: none;
-            font-weight: 600;
-            padding: 8px 12px;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(45deg, var(--primary-color), #34495e);
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
             border-radius: 5px;
-            display: inline-block;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
         }
-        a:hover {
-            background: #3498db22;
+
+        .btn:hover {
+            background: #2980b9;
         }
-        .download-icon {
-            margin-right: 8px;
-            font-size: 1.1em;
+
+        .btn-icon {
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#thesis" class="nav-link">Thesis</a></li>
+            <li><a href="#presentation" class="nav-link">Presentation</a></li>
+            <li><a href="#demo" class="nav-link">Demo</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
             <h1>Vincent Uba</h1>
-            <p>Masters Thesis Portfolio</p>
-        </header>
-
-        <div class="section">
-            <h2>📚 Thesis Documentation</h2>
-            <p>Comprehensive research paper detailing my thesis work and findings.</p>
-            <a href="thesis/Vincent_Uba_Thesis.pdf" download class="download-link">
-                <span class="download-icon">📄</span>Download Thesis (PDF)
-            </a>
+            <p>Masters in Computer Science</p>
+            <p class="subtitle">Innovative Research in Human-Computer Interaction</p>
         </div>
+    </header>
 
-        <div class="section">
-            <h2>🎓 Masters Presentation</h2>
-            <p>Final thesis defense presentation deck containing research overview and conclusions.</p>
-            <a href="presentations/Uba_presentation_Master.pptx" download class="download-link">
-                <span class="download-icon">📊</span>Download Presentation (PPTX)
-            </a>
-        </div>
+    <main class="container">
+        <section id="thesis" class="card-grid">
+            <article class="card">
+                <h2>📄 Thesis Document</h2>
+                <p>Comprehensive research paper detailing methodology, results, and conclusions.</p>
+                <a href="thesis/Vincent_Uba_Thesis.pdf" download class="btn">
+                    <span class="btn-icon">⬇️</span>Download PDF
+                </a>
+            </article>
 
-        <div class="section">
-            <h2>📽️ Prototype Demonstration</h2>
-            <p>Video demonstration of the implemented system and its functionality.</p>
-            <a href="videos/thesis_demo.mp4" class="download-link">
-                <span class="download-icon">▶️</span>Watch Demonstration Video
-            </a>
-        </div>
+            <article class="card">
+                <h2>📊 Defense Presentation</h2>
+                <p>Final thesis presentation deck with visual explanations and data analysis.</p>
+                <a href="presentations/Uba_presentation_Master.pptx" download class="btn">
+                    <span class="btn-icon">⬇️</span>Download PPTX
+                </a>
+            </article>
+        </section>
 
-        <div class="section">
-            <h2>🔗 GitHub Repository</h2>
-            <p>Access the complete source code and project documentation.</p>
-            <a href="https://github.com/VinnyLii" target="_blank" rel="noopener" class="download-link">
-                <span class="download-icon">💻</span>View GitHub Repository
-            </a>
-        </div>
+        <section id="demo" class="card">
+            <h2>🎥 System Demonstration</h2>
+            <p>Watch the prototype in action through this detailed video demonstration.</p>
+            <div class="video-container" style="position: relative; padding-top: 56.25%">
+                <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">
+                    <source src="videos/thesis_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
 
-        <footer style="margin-top: 3em; color: #7f8c8d;">
-            <p>Contact: <a href="mailto:vincentbarthuba@gmail.com">your.email@example.com</a></p>
+    <footer class="footer">
+        <section id="contact">
+            <h3>Connect With Me</h3>
+            <div class="social-links">
+                <a href="https://github.com/VinnyLii" class="btn" target="_blank" rel="noopener">
+                    <span class="btn-icon">💻</span>GitHub
+                </a>
+                <a href="mailto:littleuba@gmail.com" class="btn">
+                    <span class="btn-icon">📧</span>Email
+                </a>
+            </div>
             <p>© 2023 Vincent Uba. All rights reserved.</p>
-        </footer>
-    </div>
+        </section>
+    </footer>
 </body>
 </html>
