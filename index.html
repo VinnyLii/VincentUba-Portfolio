@@ -165,9 +165,13 @@
             <a href="thesis/Vincent_Uba_Thesis.pdf" target="_blank" class="btn">
                 <span class="btn-icon">👁️</span>View PDF
             </a>
-            <a href="thesis/Vincent_Uba_Thesis.pdf" download class="btn">
-                <span class="btn-icon">⬇️</span>Download PDF
-            </a>
+            <div>
+                <input type="password" id="thesisPassword" placeholder="Enter password" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;">
+                <button onclick="downloadThesis()" class="btn">
+                    <span class="btn-icon">⬇️</span>Download PDF
+                </button>
+                <p id="thesisError" style="color: red; display: none;">Incorrect password!</p>
+            </div>
         </div>
     </article>
 
@@ -178,13 +182,16 @@
             <a href="presentations/Uba_presentation_Master.pptx" target="_blank" class="btn">
                 <span class="btn-icon">👁️</span>View PPTX
             </a>
-            <a href="presentations/Uba_presentation_Master.pptx" download class="btn">
-                <span class="btn-icon">⬇️</span>Download PPTX
-            </a>
+            <div>
+                <input type="password" id="presentationPassword" placeholder="Enter password" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;">
+                <button onclick="downloadPresentation()" class="btn">
+                    <span class="btn-icon">⬇️</span>Download PPTX
+                </button>
+                <p id="presentationError" style="color: red; display: none;">Incorrect password!</p>
+            </div>
         </div>
     </article>
 </section>
-
 <section id="demo" class="card">
     <h2>🎥 System Demonstration</h2>
     <p>Watch the prototype in action through these detailed video demonstrations.</p>
@@ -206,6 +213,7 @@
     </div>
 </section>
     </main>
+    
 
     <footer class="footer">
         <section id="contact">
@@ -221,5 +229,7 @@
             <p>© 2023 Vincent Uba. All rights reserved.</p>
         </section>
     </footer>
+    <!-- Add this line before </body> -->
+<script src="scripts/download.js"></script>
 </body>
 </html>
