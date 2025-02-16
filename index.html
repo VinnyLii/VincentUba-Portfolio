@@ -156,42 +156,62 @@
         </div>
     </header>
 
-    <main class="container">
-<section id="thesis" class="card-grid">
-    <article class="card">
-        <h2>📄 Thesis Document</h2>
-        <p>Comprehensive research paper detailing methodology, results, and conclusions.</p>
-        <div class="btn-group">
-            <a href="thesis/Vincent_Uba_Thesis.pdf" target="_blank" class="btn">
-                <span class="btn-icon">👁️</span>View PDF
-            </a>
-            <div>
-                <input type="password" id="thesisPassword" placeholder="Enter password" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;">
-                <button onclick="downloadThesis()" class="btn">
-                    <span class="btn-icon">⬇️</span>Download PDF
-                </button>
-                <p id="thesisError" style="color: red; display: none;">Incorrect password!</p>
+<main class="container">
+    <!-- Thesis Section -->
+    <section id="thesis" class="card-grid">
+        <article class="card">
+            <h2>📄 Thesis Document</h2>
+            <p>Comprehensive research paper detailing methodology, results, and conclusions.</p>
+            <div class="btn-group">
+                <a href="thesis/Vincent_Uba_Thesis.pdf" target="_blank" class="btn">
+                    <span class="btn-icon">👁️</span>View PDF
+                </a>
+                <div>
+                    <input type="password" id="thesisPassword" placeholder="Enter password" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;">
+                    <button onclick="downloadThesis()" class="btn">
+                        <span class="btn-icon">⬇️</span>Download PDF
+                    </button>
+                    <p id="thesisError" style="color: red; display: none;">Incorrect password!</p>
+                </div>
             </div>
-        </div>
-    </article>
+        </article>
 
-    <article class="card">
-        <h2>📊 Defense Presentation</h2>
-        <p>Final thesis presentation deck with visual explanations and data analysis.</p>
-        <div class="btn-group">
-            <a href="presentations/Uba_presentation_Master.pptx" target="_blank" class="btn">
-                <span class="btn-icon">👁️</span>View PPTX
-            </a>
-            <div>
-                <input type="password" id="presentationPassword" placeholder="Enter password" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;">
-                <button onclick="downloadPresentation()" class="btn">
-                    <span class="btn-icon">⬇️</span>Download PPTX
-                </button>
-                <p id="presentationError" style="color: red; display: none;">Incorrect password!</p>
+        <!-- Defense Presentation Section -->
+        <article class="card">
+            <h2>📊 Defense Presentation</h2>
+            <p>Final thesis presentation deck with visual explanations and data analysis.</p>
+            <div class="btn-group">
+                <a href="presentations/Uba_presentation_Master.pptx" target="_blank" class="btn">
+                    <span class="btn-icon">👁️</span>View PPTX
+                </a>
+                <div>
+                    <input type="password" id="presentationPassword" placeholder="Enter password" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;">
+                    <button onclick="downloadPresentation()" class="btn">
+                        <span class="btn-icon">⬇️</span>Download PPTX
+                    </button>
+                    <p id="presentationError" style="color: red; display: none;">Incorrect password!</p>
+                </div>
             </div>
-        </div>
-    </article>
-</section>
+        </article>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="card-grid">
+        <article class="card">
+            <h2>📄 Curriculum Vitae (CV)</h2>
+            <p>View or download my CV to learn more about my professional background and skills.</p>
+            <img src="cv/cv-thumbnail.jpg" alt="CV Thumbnail" style="max-width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+            <p>File size: 1.2 MB</p>
+            <div class="btn-group">
+                <a href="cv/Vincent_Uba_CV.pdf" target="_blank" class="btn">
+                    <span class="btn-icon">👁️</span>View CV
+                </a>
+                <a href="cv/Vincent_Uba_CV.pdf" download class="btn">
+                    <span class="btn-icon">⬇️</span>Download CV
+                </a>
+            </div>
+        </article>
+    </section>
 <section id="demo" class="card">
     <h2>🎥 System Demonstration</h2>
     <p>Watch the prototype in action through these detailed video demonstrations.</p>
